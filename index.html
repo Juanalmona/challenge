@@ -1,11 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alura ONE ChallengeR</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="styles.css" />  
+    <script src="index.js"></script>     
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>     
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo-container">
+        <img src="assets/Logo.png" alt="" class="logo" id="logo" />
+      </div>       
+      <div class="encriptar">
+        <textarea
+          name="texto"
+          class="texto"
+          id="texto"
+          cols="30"
+          rows="10"
+          placeholder="Ingresa el texto aquí"
+        ></textarea>
+
+        <div class="terminos">
+          <p>Solo letras minusculas y sin acentos.</p>
+        </div>
+        <div class="botones">
+          <input
+            type="button"
+            class="btn-encriptar"
+            value="Encriptar"
+            onclick="encriptar()"
+          />          
+          <input
+            type="button"
+            class="btn-desencriptar"
+            value="Desencriptar"
+            onclick="desencriptar()"
+          />
+        </div>
+      </div>
+      <div class="encriptado">
+        <textarea
+        name="texto_derecha"
+        class="texto_derecha"
+        id="texto_derecha"
+        cols="30"
+        rows="10"
+      ></textarea>
+        <img src="assets/Munieco.png" alt="" id="munieco" />
+
+        <div class="mensaje-encriptado" id="mensaje-encriptado">
+          <p id="parrafo">
+            Ingresa el texto que deseas encriptar o desencriptar
+          </p>
+
+      
+        </div>
+        <div class="btn_Copiar">
+          <input type="button" 
+          class="btn-copiar"
+          id="btn_copiar"
+          value="Copiar"
+          onclick="copiar()"
+          />      
+        </div>    
+      </div>
+    </div>
+  </body>
+
 </html>
